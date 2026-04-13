@@ -15,7 +15,7 @@ cmds.file(new=True, force=True)
 # =============================================================================
 # SECTION 1: The problem — duplicated code
 # =============================================================================
-# Watch how painful it is to add a fourth tree."
+# Watch how painful it is to add a fourth tree.
 
 # Tree 1 — copy-pasted block
 trunk1 = cmds.polyCylinder(name="trunk1", radius=0.3, height=2.0)[0]
@@ -35,7 +35,7 @@ cmds.move(4, 1.0, 0, trunk3)
 canopy3 = cmds.polySphere(name="canopy3", radius=1.2)[0]
 cmds.move(4, 2.7, 0, canopy3)
 
-# If we want 20 trees, we'd need 20 copies. Functions solve this."
+# If we want 20 trees, we'd need 20 copies. Functions solve this.
 
 # Clean up before the refactored version
 cmds.file(new=True, force=True)
@@ -121,12 +121,12 @@ def demonstrate_scope():
 demonstrate_scope()
 # print(inner_message)  # NameError! inner_message doesn't exist out here.
 
-# This is a GOOD thing — it means functions don't accidentally interfere with each other."
+# This is a GOOD thing — functions can't accidentally interfere with each other.
 
 # =============================================================================
 # SECTION 6: Utility function — place_in_circle()
 # =============================================================================
-# function that places any creation function's results in a circle."
+# A utility function that places any creation function's results in a circle.
 
 def place_in_circle(create_func, count, radius, center_x=0, center_z=0):
     """Call create_func repeatedly, placing results in a circle.

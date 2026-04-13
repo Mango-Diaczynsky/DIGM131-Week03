@@ -16,7 +16,7 @@ cmds.file(new=True, force=True)
 # =============================================================================
 # SECTION 1: Low-level creation functions (each does ONE thing)
 # =============================================================================
-# a function should do one thing and do it well."
+# A function should do one thing and do it well.
 
 def create_ground(width=40, depth=40):
     """Create and shade a ground plane. Returns the ground node name."""
@@ -69,7 +69,7 @@ def create_bench(x, z, rotation_y=0):
 # =============================================================================
 # SECTION 2: Mid-level composition functions — combining creation with layout
 # =============================================================================
-# Notice how each mid-level function focuses on LAYOUT, not geometry details."
+# Notice how each mid-level function focuses on LAYOUT, not geometry details.
 
 def build_city_block(center_x, center_z, building_count=4):
     """Place a cluster of buildings with varied heights around a center point.
@@ -116,7 +116,7 @@ def line_street_with_lampposts(start_x, end_x, z, spacing=4.0):
 # =============================================================================
 # SECTION 3: Shading utility — apply color to a list of objects
 # =============================================================================
-# This function takes any list of nodes and colors them all the same way."
+# This function takes any list of nodes and colors them all the same way.
 
 def apply_color(nodes, r, g, b, shader_name="colorShader"):
     """Apply a Lambert shader with the given RGB color to all listed nodes."""
@@ -130,7 +130,7 @@ def apply_color(nodes, r, g, b, shader_name="colorShader"):
 # =============================================================================
 # SECTION 4: Top-level scene assembly — the "main" function
 # =============================================================================
-# Each line is a high-level instruction; the details are hidden inside each function."
+# Each line is a high-level instruction; the details are hidden inside each function.
 
 def build_full_scene():
     """Assemble the complete scene from modular parts."""
@@ -167,6 +167,6 @@ def build_full_scene():
 
 
 # If you want to change how a tree looks, you edit create_tree() in ONE place.
-# If you want more buildings, you just call build_city_block() again."
+# If you want more buildings, just call build_city_block() again.
 build_full_scene()
 
